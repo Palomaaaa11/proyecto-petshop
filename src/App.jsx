@@ -3,31 +3,28 @@ import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
 
-export default function App() {
-  const [count, setCount] = useState(0)
-
+export default function Registro(){
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
+    <div className="container">
+      <div className="izquierda"></div>
+
+      <div className="derecha"></div>
+      <h2>Bella Patita</h2>
+      <h1>Registrto</h1>
+      <form>
+        <div className="form-group">
+          <input type="text" placeholder="Ingrese un nombre de usuario"/>
+        </div>
+        <div className="form-group">
+          <input type="email" placeholder="Ingrese su correo electronico"/>
+        </div>
+        <div className="form-group">
+          <inpu type="password" placeholder="Ingrese una contraseña"/>
+        </div>
+        <button type="submit" className="btn">
+          Registrarse
         </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
+      </form>
+    </div>
   )
 }
