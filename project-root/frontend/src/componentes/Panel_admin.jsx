@@ -1,10 +1,25 @@
 import { useState } from "react"
 
-export default function PanelAdmin(){
+export default function PanelAdmin({subir}){
 
+    const [imagen, setImagen] = usestate()
     const [nombre, setNombre] = useState("");
     const [descripcion, setDescripcion] = useState("");
     const [precio, setPrecio] = useState("");
+
+    const guardarProducto = (e) =>{
+        e.preventDefault();
+
+        const nuevoProducto= {
+            imagen,
+            nombre,
+            descripcion,
+            precio
+        }
+
+        subir(nuevoProducto)
+    }
+
 
     return(
     <div className="panel_container">
