@@ -1,5 +1,5 @@
 
-export default function pagCatalogo(){
+export default function PagCatalogo(){
 
     return(
         <div className="catalogo_container">

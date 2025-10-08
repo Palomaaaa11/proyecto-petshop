@@ -1,5 +1,5 @@
 
-export default function signup () {
+export default function SignUp () {
     return (
       <div className="container">
         <div className="card">

@@ -1,6 +1,12 @@
+import { useState } from "react"
 
+export default function PanelAdmin(){
 
-export default function panelAdmin(){
+    const [nombre, setNombre] = useState("");
+    const [descripcion, setDescripcion] = useState("");
+    const [precio, setPrecio] = useState("");
+
+    return(
     <div className="panel_container">
         <div className="cabecera">
             <h1>Panel de Administración</h1>
@@ -17,9 +23,9 @@ export default function panelAdmin(){
 
                 </div>
                 <div>
-                    
+                    <input type="text" />
                 </div>
             </div>
         </div>
-    </div>
+    </div>)
 }

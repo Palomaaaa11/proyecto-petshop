@@ -1,6 +1,8 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
+import SignUp from './componentes/signup'
+import LogIn from './componentes/login'
+import PanelAdmin from './componentes/panel_admin'
+import PagCatalogo from './componentes/catalog_product'
 import './App.css'
 
 export default function App() {
