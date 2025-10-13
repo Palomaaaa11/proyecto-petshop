@@ -1,5 +1,30 @@
 
+import { useState } from "react";
+import axios from "axios";
+
 export default function LogIn () {
+  const [email, setEmail] = useState ("");
+  const [password, setPassword] = useState ("");
+
+  const handeLogin = async (e) => {
+    e.preventDefault();
+
+    try {
+      const response = await axios.post("", {
+        email,
+        password,
+      });
+
+      if (response.data.seccess) {
+        alert("Inicio de sesion exitoso");
+      } else {
+        alert("Usuario o contraseña incorrectos");
+      }
+    } catch (error) {
+      console.error("Error al iniciar Sesion", error);
+      alert("Usuario o contrasela incorrectos");
+    }
+  };
     return (
       <div className="container">
         <div className="card">
