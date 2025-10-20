@@ -7,17 +7,20 @@ export default function PanelAdmin({subir}){
     const [descripcion, setDescripcion] = useState("");
     const [precio, setPrecio] = useState("");
 
+     const manejarImagen = (e) => {
+    setImagen(e.target.files[0]); // guardamos el archivo seleccionado
+  };
+
     const guardarProducto = (e) =>{
         e.preventDefault();
 
-        const nuevoProducto= {
-            imagen,
-            nombre,
-            descripcion,
-            precio
-        }
+    const formData = new FormData();
+    formData.append("imagen", imagen);
+    formData.append("nombre", nombre);
+    formData.append("descripcion", descripcion);
+    formData.append("precio", precio);
 
-        subir(nuevoProducto)
+        subir(formData)
     }
 
 

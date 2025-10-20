@@ -1,0 +1,26 @@
+{
+  "name": "backend",
+  "version": "1.0.0",
+  "description": "",
+  "homepage": "https://github.com/Palomaaaa11/proyecto-petshop#readme",
+  "bugs": {
+    "url": "https://github.com/Palomaaaa11/proyecto-petshop/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Palomaaaa11/proyecto-petshop.git"
+  },
+  "license": "ISC",
+  "author": "Paloma",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "start": "node ./index.js",
+    "dev": "nodemon ./index.js"
+  },
+  "dependencies": {
+    "dotenv": "^17.2.3",
+    "express": "^5.1.0",
+    "nodemon": "^3.1.10"
+  }
+}
