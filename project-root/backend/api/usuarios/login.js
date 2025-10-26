@@ -8,7 +8,7 @@ const {verificarPass, generarToken} = require('@damianegreco/hashpass');
 router.post('/', function (req, res, next) {
     const {correo, contraseña} = req.body;
 
-    let sql = "SELECT id_usuario, nombre, correo, contraseña FROM usuarios WHERE correo = ?";
+    let sql = "SELECT id_usuario, nombre, correo, contraseña, rol FROM usuarios WHERE correo = ?";
     db.query(sql, [correo])
     .then(([usuarios]) => {
         if (usuarios.length === 1) {
@@ -18,7 +18,8 @@ router.post('/', function (req, res, next) {
                 const datos = {
                     id_usuario: usuario.id_usuario,
                     nombre: usuario.nombre,
-                    correo: usuario.correo
+                    correo: usuario.correo,
+                    rol: usuario.rol
                 };
 
                 const token = generarToken(TOKEN_SECRET, 7, datos );
