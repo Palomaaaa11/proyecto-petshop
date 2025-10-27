@@ -1,6 +1,7 @@
-
-const express = require('express');
 require('dotenv').config();
+const express = require('express');
+
+const path = require('path');
 const app = express();
 const puerto = process.env.PUERTO;
 
@@ -11,7 +12,8 @@ app.use(express.json());
 app.use('/api', apiRouter);
 
 
-
+const dirArchivos = path.join(__dirname, "archivos");
+app.use('/archivos', express.static(dirArchivos));
 
 
 app.listen(puerto, function(error) {

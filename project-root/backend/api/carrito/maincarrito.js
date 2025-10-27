@@ -34,11 +34,11 @@ router.post('/',verificarToken, function (req, res, next) {
         })
         .then(() => {
             return db.query(
-                "UPDATE productos SET stock = ? WHERE id_producto = ?",
-                [item.cantidad, item.id_producto]
-            );
-        });
-    };
+            "UPDATE productos SET stock = stock - ? WHERE id_producto = ?",
+            [item.cantidad, item.id_producto]
+        );
+    });
+};
 
     const promesas = carrito.map(item => procesarItem(item));
     Promise.all(promesas)

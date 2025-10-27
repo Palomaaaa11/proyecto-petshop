@@ -1,10 +1,18 @@
+
 const {verificarToken} = require('@damianegreco/hashpass');
-const {TOKEN_SECRET} = process.env;
+require('dotenv').config();
 
 const verificarTokenMiddleware = (req, res, next) => {
     const token = req.headers.authorization;
 
-    const verificacion = verificarToken(TOKEN_SECRET, token);
+    console.log("HEADER AUTHORIZATION:", req.headers.authorization);
+
+    const TOKEN_SECRET = process.env.TOKEN_SECRET;
+    console.log("TOKEN_SECRET MIDDLEWARE:", TOKEN_SECRET);
+
+
+    const verificacion = verificarToken(process.env.TOKEN_SECRET, token);
+    console.log('Resultado verificación:', verificacion);
 
     if (verificacion?.data){
         req.usuario = verificacion.data;

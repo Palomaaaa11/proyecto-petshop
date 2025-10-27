@@ -1,7 +1,7 @@
+require('dotenv').config();
 const router = require('express').Router();;
 const db = require('../../conexiondb');
 
-const {TOKEN_SECRET} = process.env;
 
 const {verificarPass, generarToken} = require('@damianegreco/hashpass');
 
@@ -22,7 +22,7 @@ router.post('/', function (req, res, next) {
                     rol: usuario.rol
                 };
 
-                const token = generarToken(TOKEN_SECRET, 7, datos );
+                const token = generarToken(process.env.TOKEN_SECRET, 6, datos);
                 res.json({status: 'ok', token});
             } else {
                 res.status(401).send('Correo o contraseña incorrectos');
@@ -36,5 +36,7 @@ router.post('/', function (req, res, next) {
         res.status(500).send('Error al obtener el usuario');
     });
 });
+
+
 
 module.exports = router;
