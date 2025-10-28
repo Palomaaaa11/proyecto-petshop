@@ -11,7 +11,7 @@ const verificarTokenMiddleware = (req, res, next) => {
     console.log("TOKEN_SECRET MIDDLEWARE:", TOKEN_SECRET);
 
 
-    const verificacion = verificarToken(process.env.TOKEN_SECRET, token);
+    const verificacion = verificarToken(token, process.env.TOKEN_SECRET);
     console.log('Resultado verificación:', verificacion);
 
     if (verificacion?.data){

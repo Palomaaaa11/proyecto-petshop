@@ -2,7 +2,6 @@ require('dotenv').config();
 const router = require('express').Router();;
 const db = require('../../conexiondb');
 
-
 const {verificarPass, generarToken} = require('@damianegreco/hashpass');
 
 router.post('/', function (req, res, next) {
