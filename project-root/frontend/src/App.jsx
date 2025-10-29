@@ -2,7 +2,7 @@ import { useState } from 'react'
 import SignUp from './componentes/signup'
 import LogIn from './componentes/login'
 import PanelAdmin from './componentes/panel_admin'
-import PagCatalogo from './componentes/catalog_product'
+import PagCatalogo from './componentes/Catalog_product'
 import './App.css'
 
 export default function App() {
@@ -51,11 +51,8 @@ export default function App() {
 
   return(
     <div>
-    <SignUp/>
-
-    <PanelAdmin
-        subir ={(producto) => subir(producto)}
-    />
-    </div>
+    <LogIn/>
+</div>
+    
   )
 }
