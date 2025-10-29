@@ -62,8 +62,8 @@ export default function SignUp () {
   
           <div className="image-section">
             <img
-              src="https://i.ibb.co/Z6CgXQ5q/Studio-dive-pet.jpg"
-              alt="perrito"
+              src="https://i.ibb.co/PGH4JFFQ/Dise-o-sin-t-tulo.png"
+              alt="gatito"
             />
           </div>
         </div>

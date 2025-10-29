@@ -114,3 +114,90 @@ html, body, #root {
 body {
   overflow: hidden;
 }
+
+.catalogo_container {
+  background-color: #f8f8f8;
+  min-height: 100vh;
+  font-family: 'Poppins', sans-serif;
+}
+
+.header_catalogo img{
+  width: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+.productos_section{
+  text-align: center;
+  padding: 2rem 1rem;
+}
+
+.productos_section h2{
+  color: #f97316;
+  font-size: 1.8rem;
+  margin-bottom: 1.5rem;
+}
+
+.productos_grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.5rem;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.productos_card {
+  background-color: #fff;
+  border-radius: 1rem;
+  padding: 1rem;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.producto_card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 0.8rem;
+}
+
+.producto_card h3 {
+  font-size: 1rem;
+  margin-top: 0.5rem;
+  color: #333;
+}
+
+.producto_card .precio {
+  color: #f97316;
+  font-weight: 600;
+  margin: 0.3rem 0;
+}
+
+.producto_card button {
+  background-color: #f97316;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 999px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.producto_card button:hover {
+  background-color: #ea580c;
+}
+
+
+.tipo_mascota {
+  background-color: #fff3e0;
+}
+
+
+.footer_catalogo {
+  background-color: #f97316;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+  border-top-left-radius: 1rem;
+  border-top-right-radius: 1rem;
+  margin-top: 2rem;
+}
